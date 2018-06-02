@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 export default (props) => (
-    <li>
-        <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-            <a>{props.title}</a>
+    <li key={props.post.id}>
+        <Link as={`/p/${props.post.id}`} href={`/post?id=${props.post.id}`}>
+            <a>{props.post.name}</a>
         </Link>
     </li>
 );
