@@ -3,16 +3,14 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import PostLink from '../components/PostLink';
 
-const Index = () => (
+export default () => (
     <Layout>
         <h1>My Blog</h1>
 
         <ul>
-            <PostLink title="Hello Next.js"></PostLink>
-            <PostLink title="Learn Next.js is awensome"></PostLink>
-            <PostLink title="Deploy apps with Zeit"></PostLink>
+            <PostLink id="hello-nextjs" title="Hello Next.js" />
+            <PostLink id="learn-nextjs" title="Learn Next.js is awesome" />
+            <PostLink id="deploy-nextjs" title="Deploy apps with Zeit" />
         </ul>
     </Layout>
 );
-
-export default Index;
