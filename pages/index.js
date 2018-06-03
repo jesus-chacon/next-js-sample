@@ -10,9 +10,19 @@ const Index = (props) => (
 
         <ul>
             {props.shows.map(({show}) => (
-                <PostLink post={show} />
+                <PostLink key={show.id} post={show} />
             ))}
         </ul>
+
+        <style jsx>{`
+            h1, a {
+                font-family: "Arial";
+            }
+
+            ul {
+                padding: 0;
+            }
+        `}</style>
     </Layout>
 );
 
